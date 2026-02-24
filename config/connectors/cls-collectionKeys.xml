@@ -3,6 +3,7 @@
     <cloudstreamsCollectionKeys serviceName="WmCloudStreams.SoapVS">
         <servicesKeys>
             <keyDetails collectionKey="project.mjan24feb2152.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.operations.actions:CreateAccount2150" connectorServiceName="project.mjan24feb2152.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.operations.actions:CreateAccount2150"/>
+            <keyDetails collectionKey="project.mjan24feb2152.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.operations.actions:createAccount1" connectorServiceName="project.mjan24feb2152.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.operations.actions:createAccount1"/>
         </servicesKeys>
     </cloudstreamsCollectionKeys>
 </services>
