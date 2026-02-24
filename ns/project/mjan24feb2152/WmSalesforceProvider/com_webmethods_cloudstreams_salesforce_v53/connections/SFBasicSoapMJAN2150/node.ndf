@@ -34,7 +34,7 @@
       <value name="cr.password">project.mjan24feb2152.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.connections:SFBasicSoapMJAN2150.cr.password</value>
       <value name="cr.preemptiveAuthEnabled">false</value>
       <value name="cr.securityRealm"></value>
-      <value name="cr.username">vidi@softwareag.com1</value>
+      <value name="cr.username">vidi@softwareag.com</value>
       <value name="pr.allowCircularRedirects">true</value>
       <value name="pr.followServerRedirects">true</value>
       <value name="pr.httpContentCharSet">ISO-8859-1</value>
