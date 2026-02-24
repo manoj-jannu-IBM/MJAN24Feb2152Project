@@ -31,7 +31,7 @@
       <value name="cn.tcpNoDelay">false</value>
       <value name="cn.validateAfterInactivity">1000</value>
       <value name="cr.authSchemeType">none</value>
-      <value name="cr.password">%CSPassword_MJAN%</value>
+      <value name="cr.password">project.mjan24feb2152.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.connections:MJANSF21501.cr.password</value>
       <value name="cr.preemptiveAuthEnabled">false</value>
       <value name="cr.securityRealm"></value>
       <value name="cr.username">%CSUsername_MJAN%</value>
@@ -47,6 +47,7 @@
       <value name="rh.requestHeaderValues">text/xml,login</value>
     </record>
     <array name="passmanHandles" type="value" depth="1">
+      <value>project.mjan24feb2152.WmSalesforceProvider.com_webmethods_cloudstreams_salesforce_v53.connections:MJANSF21501.cr.password</value>
     </array>
     <record name="connectionManagerProperties" javaclass="com.wm.util.Values">
       <value name="blockTimeout">1000</value>
@@ -61,9 +62,8 @@
       <value name="timeoutType">fixed</value>
     </record>
     <array name="formattableFields" type="value" depth="1">
-      <value>cr.password</value>
       <value>cr.username</value>
     </array>
-    <value name="connectionEnabled">true</value>
+    <value name="connectionEnabled">false</value>
   </record>
 </Values>
