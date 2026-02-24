@@ -34,7 +34,7 @@
       <value name="cr.password">%CSPassword_MJAN%</value>
       <value name="cr.preemptiveAuthEnabled">false</value>
       <value name="cr.securityRealm"></value>
-      <value name="cr.username">vidi@softwareag.com</value>
+      <value name="cr.username">%CSUsername_MJAN%</value>
       <value name="pr.allowCircularRedirects">true</value>
       <value name="pr.followServerRedirects">true</value>
       <value name="pr.httpContentCharSet">ISO-8859-1</value>
@@ -62,6 +62,7 @@
     </record>
     <array name="formattableFields" type="value" depth="1">
       <value>cr.password</value>
+      <value>cr.username</value>
     </array>
     <value name="connectionEnabled">true</value>
   </record>
