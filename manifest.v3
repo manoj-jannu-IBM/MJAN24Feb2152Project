@@ -11,18 +11,19 @@
   <null name="replication_services"/>
   <record name="requires" javaclass="com.wm.util.Values">
     <value name="WmSalesforceProvider">12.0.0.0.17</value>
+    <value name="WmSalesforceRESTProvider">12.0.0.0.15</value>
   </record>
   <null name="lazy_load_node_types"/>
   <null name="listACL"/>
   <value name="webappLoad">yes</value>
   <value name="reloadWithDependentPackage">yes</value>
-  <value name="build">30</value>
+  <value name="build">31</value>
   <null name="description"/>
   <value name="created_date">24-02-2026 16:23:17 GMT</value>
   <null name="extendedProperties"/>
   <null name="target_server_version"/>
   <value name="isProjectPackage">true</value>
-  <value name="lastUpdated">2026-02-25T04:33:33.010311152Z</value>
+  <value name="lastUpdated">2026-02-25T04:33:39.770119599Z</value>
   <value name="wmProjectId">flbb936cd4bf0b4777b83bf5dffaa9989c</value>
   <value name="creator">Manoj Jannu</value>
 </Values>
