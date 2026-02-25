@@ -12,6 +12,7 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 - name: WmSalesforceRESTProvider
+  version: 12.0.0.0.15
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 services:
@@ -32,6 +33,14 @@ services:
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.15
 - serviceName: project.mjan24feb2152.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.connections:MJAN25CSACF
+  packages:
+  - name: MJAN24Feb2152Project
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.17
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.15
+- serviceName: project.mjan24feb2152.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.connections:MJAN25SFACFVARSUB
   packages:
   - name: MJAN24Feb2152Project
     version: "1.0"
@@ -71,7 +80,25 @@ services:
     version: 12.0.0.0.17
   - name: WmSalesforceRESTProvider
     version: 12.0.0.0.15
+- serviceName: project.mjan24feb2152.integrations:V1
+  packages:
+  - name: MJAN24Feb2152Project
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.17
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.15
+- serviceName: project.mjan24feb2152.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.operations.actions:CreateAccount25
+  packages:
+  - name: MJAN24Feb2152Project
+    version: "1.0"
+  - name: WmSalesforceProvider
+    version: 12.0.0.0.17
+  - name: WmSalesforceRESTProvider
+    version: 12.0.0.0.15
 configurationVariables:
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.connectionEnabled
+  : "true"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.poolable
   : "true"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.cn.socketLinger
@@ -80,6 +107,10 @@ configurationVariables:
   : "true"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.oauth_v20.authorizationServerUrl
   : https://login.salesforce.com/services/oauth2/authorize
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.sockBuffSize
+  : "8192"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.poolable
+  : "true"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.pr.protocolVersion
   : HTTP/1.1
   ? iscloudstreamsconnectorservice.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..operations..actions:CreateAccount2150.connectionAlias
@@ -98,6 +129,8 @@ configurationVariables:
   : "3"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.cn.providerUrl
   : https://login.salesforce.com/services/Soap/u/53.0
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.oauth_v20.authorizationHeaderPrefix
+  : Bearer
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.pr.followServerRedirects
   : "true"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.oauth_v20.authorizationHeaderPrefix
@@ -110,6 +143,8 @@ configurationVariables:
   : "1"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.cn.enableCompression
   : "false"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.oauth_v20.refreshAccessToken
+  : "true"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.poolIncrementSize
   : "1"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.rh.requestHeaderNames
@@ -120,6 +155,12 @@ configurationVariables:
   : "false"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.poolIncrementSize
   : "1"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.oauth_v20.accessTokenRefreshURL
+  : https://login.salesforce.com/services/oauth2/token
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.retryIfRequestSentOk
+  : "true"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.expireTimeout
+  : "1000"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.oauth_v20.authenticationServerUrl
   : https://login.salesforce.com/services/oauth2/token
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.pr.userAgent
@@ -128,6 +169,8 @@ configurationVariables:
   : "-1"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.cr.password
   : "{AES}Qs5TFtFH2U7kBxW0GQcYJlPeI3uBY4T+JLi+LB6GgiM="
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.oauth.consumerId
+  : '%ClientID%'
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.cn.hostnameVerifier
   : org.apache.http.conn.ssl.DefaultHostnameVerifier
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.poolable
@@ -153,8 +196,10 @@ configurationVariables:
   : "false"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.minimumPoolSize
   : "1"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.tcpNoDelay
+  : "false"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.oauth.accessToken
-  : "{AES}bzO+KX5xKoE0CKrgiYZryEJCc28x2QBODfJSJ6CleRFa+2DzxictbQsvDI2sVqSPyla7tLzWYTVeW/YHTq2TnIndWhV0t/tnSTjg5GXclIH2589LJj3W7DaymwFSO9GDthMYCsMRtvjnQ85gGn25EWmK1wuN3U1rA1B0VhuZoUw="
+  : "{AES}bzO+KX5xKoE0CKrgiYZryDg/kmwKJDp9QgyCDr9Ha1GMteTnR68WvH7itgNYkmv+0s1Dw1C2y/f+brWhSdqwyXDWxgJW54Pl47oDTsun1OpPmP3sjSaZWhatFx8OkuF8swAOOcYa2NljULWnSLHHSmmK1wuN3U1rA1B0VhuZoUw="
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.timeoutType
   : fixed
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.cn.validateAfterInactivity
@@ -175,16 +220,32 @@ configurationVariables:
   : "false"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.cn.readTimeout
   : "180000"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.providerUrl
+  : '%InstanceURL%'
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.oauth_v20.scope
+  : offline_access api refresh_token
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.cn.socketStaleCheck
   : "true"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.timeoutType
   : fixed
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.oauth_v20.refreshToken
+  : "{AES}iVEYOEICT1x7P9RL3dwVv0pQv1IODTw0Qm0vrSHPR8I0XZ0/KrBE7WODHo6AzR1637cjFT8vTWSxMJCq+8Fwx23ujlk6B/pLD2FnkHRwbbHw+MNh1fzWP9ra98cky/Z+"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.maximumPoolSize
+  : "10"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.connectionEnabled
   : "false"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.minimumPoolSize
+  : "1"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.readTimeout
+  : "30000"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.oauth_v20.authenticationServerUrl
+  : https://login.salesforce.com/services/oauth2/token
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.startupRetryCount
   : "0"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.pr.httpContentCharSet
   : ISO-8859-1
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.startupRetryCount
+  : "0"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.cn.tcpNoDelay
   : "false"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.pr.useExpectCont
@@ -203,12 +264,16 @@ configurationVariables:
   : "8192"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.cn.providerUrl
   : https://d0o000001qr6keac-dev-ed.my.salesforce.com
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.keepAliveInterval
+  : "300000"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.connectionEnabled
   : "true"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.cr.password
   : "{AES}Qs5TFtFH2U7kBxW0GQcYJlPeI3uBY4T+JLi+LB6GgiM="
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.cn.socketLinger
   : "-1"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.validateAfterInactivity
+  : "1000"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.pr.allowCircularRedirects
   : "true"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.cn.connectTimeout
@@ -219,12 +284,24 @@ configurationVariables:
   : "false"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.cn.sockBuffSize
   : "8192"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.enableSNI
+  : "true"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.socketLinger
+  : "-1"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.poolIncrementSize
+  : "1"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.cn.reuseAddr
   : "false"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.cn.providerUrl
   : https://login.salesforce.com/services/Soap/u/53.0
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.retryCount
+  : "4"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.rh.requestHeaderValues
   : "text/xml,login"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.oauth_v20.authorizationServerUrl
+  : https://login.salesforce.com/services/oauth2/authorize
+  ? iscloudstreamsconnectorservice.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..operations..actions:CreateAccount25.connectionAlias
+  : project.mjan24feb2152.WmSalesforceRESTProvider.com_webmethods_cloudstreams_salesforce_rest_v60.connections:MJAN25CSACF
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.oauth_v20.accessTokenRefreshURL
   : https://login.salesforce.com/services/oauth2/token
   jdbcfunc.SAPTxStore.connPoolAlias: SAP TxStore Pool
@@ -236,12 +313,20 @@ configurationVariables:
   : "false"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.poolable
   : "true"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.startupBackoffSecs
+  : "10"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.cr.username
   : '%CSUsername_MJAN%'
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.cn.validateAfterInactivity
   : "1000"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.cr.authSchemeType
   : none
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.hostnameVerifier
+  : org.apache.http.conn.ssl.DefaultHostnameVerifier
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.idleTimeout
+  : "-1"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.oauth_v20.accessTokenRefreshURLRequest
+  : URL Query String
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.cn.idleTimeout
   : "-1"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.startupBackoffSecs
@@ -254,16 +339,26 @@ configurationVariables:
   : "false"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.cn.idleTimeout
   : "-1"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.oauth_v20.authorizationHeaderInTokenRefresh
+  : "false"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.enableCompression
+  : "false"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.rh.requestHeaderValues
   : "text/xml,login"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.connectionEnabled
   : "false"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.connectTimeout
+  : "30000"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.cn.keepAliveInterval
   : "300000"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.cn.retryIfRequestSentOk
   : "true"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.pr.serverRedirectMax
   : "5"
+  ? iscloudstreamsconnectorservice.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..operations..actions:CreateAccount25.virtualServiceName
+  : WmCloudStreams.RestVS
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.blockTimeout
+  : "1000"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.cn.reuseAddr
   : "false"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.rh.requestHeaderNames
@@ -288,8 +383,12 @@ configurationVariables:
   : HTTP/1.1
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.timeoutType
   : auto
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.oauth.accessToken
+  : "{AES}bzO+KX5xKoE0CKrgiYZryEJCc28x2QBODfJSJ6CleRFa+2DzxictbQsvDI2sVqSPyla7tLzWYTVeW/YHTq2TnIndWhV0t/tnSTjg5GXclIH2589LJj3W7DaymwFSO9GDthMYCsMRtvjnQ85gGn25EWmK1wuN3U1rA1B0VhuZoUw="
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.pr.httpContentCharSet
   : ISO-8859-1
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.oauth.consumerSecret
+  : '%ClientSecret%'
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.startupBackoffSecs
   : "10"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.oauth_v20.refreshToken
@@ -298,14 +397,20 @@ configurationVariables:
   : Cloudstreams
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.oauth.consumerSecret
   : "{AES}8bc8/WHaL3dph5PtuD02009Twi827NgOvyLy8mkfF31b5gfhajCNPAG/2OxW9yx8fPwx12ONSDGw1NRjVAxIemmK1wuN3U1rA1B0VhuZoUw="
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.timeoutType
+  : auto
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.maximumPoolSize
   : "10"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.pr.allowCircularRedirects
   : "true"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.cn.socketStaleCheck
   : "true"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.socketStaleCheck
+  : "true"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.sessionExpiry
   : "14"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cx.grant_type
+  : refresh_token
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.cn.enableSNI
   : "true"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.oauth_v20.scope
@@ -316,6 +421,8 @@ configurationVariables:
   : URL Query String
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:SFBasicSoapMJAN2150.cn.retryIfRequestSentOk
   : "true"
+  ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25SFACFVARSUB.cn.reuseAddr
+  : "false"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceProvider..com_webmethods_cloudstreams_salesforce_v53..connections:MJANSF21501.blockTimeout
   : "1000"
   ? cloudstreamsconnection.project..mjan24feb2152..WmSalesforceRESTProvider..com_webmethods_cloudstreams_salesforce_rest_v60..connections:MJAN25CSACF.startupRetryCount
