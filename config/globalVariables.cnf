@@ -23,6 +23,11 @@
         <value name="value">gvhandle.ClientID</value>
         <value name="isSecure">true</value>
       </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">ClientSecret</value>
+        <value name="value">gvhandle.ClientSecret</value>
+        <value name="isSecure">true</value>
+      </record>
     </array>
   </record>
 </IDataXMLCoder>
