@@ -13,6 +13,11 @@
         <value name="value">vidi@softwareag.com</value>
         <value name="isSecure">false</value>
       </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="key">InstanceURL</value>
+        <value name="value">https://d0o000001qr6keac-dev-ed.my.salesforce.com</value>
+        <value name="isSecure">false</value>
+      </record>
     </array>
   </record>
 </IDataXMLCoder>
